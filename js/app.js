@@ -33,6 +33,18 @@
 					full: 'http://lorempixel.com/400/200/food/2',
 					thumb: 'http://lorempixel.com/50/50/food/2'
 				},
+			],
+			reviews: [
+				{	
+					stars: 5,
+					body: 'This is awesome!',
+					author: 'dude@mailinator.com'
+				},
+				{	
+					stars: 1,
+					body: 'Terrible stuff!',
+					author: 'rodger@megahaterz.com'
+				},
 			]
 		},
 		{
@@ -50,6 +62,18 @@
 					full: 'http://lorempixel.com/400/200/food/4',
 					thumb: 'http://lorempixel.com/50/50/food/4'
 				}
+			],
+			reviews: [
+				{	
+					stars: 5,
+					body: 'Very pentagonal. Like it!',
+					author: 'pentafan@gmail.com'
+				},
+				{	
+					stars: 3,
+					body: 'Not really impressed. Price is high.',
+					author: 'soso@yahoo.com'
+				},
 			]
 		}
 	]
