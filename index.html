@@ -46,19 +46,14 @@
 					</div>
 					<div class="panel" ng-show="panel.isSelected(3)">
 						<h4>Reviews</h4>
-						<blockquote ng-repeat="review in product.reviews">
-							<b>Stars: {{ review.stars }}</b>
-							{{review.body}}
-							<cite>- by: {{ review.author }} on {{ review.createdOn | date }}</cite>
+						<blockquote ng-repeat="review in product.reviews"
+							ng-include="'app/templates/review.html'">
 						</blockquote>
 
 						<form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
 							ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)"
 							novalidate>
-							<blockquote>
-								<b>Stars: {{ reviewCtrl.review.stars }}</b>
-								{{ reviewCtrl.review.body }}
-								<cite>by: {{ reviewCtrl.review.author }}</cite>
+							<blockquote ng-include="'app/templates/review.html'">
 							</blockquote>
 							<select ng-model="reviewCtrl.review.stars" required>
 								<option value="1">1 star</option>
@@ -80,6 +75,6 @@
 	</ul>
 	
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="app/js/app.js"></script>
 </body>
 </html>
