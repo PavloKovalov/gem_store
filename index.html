@@ -46,8 +46,7 @@
 					</div>
 					<div class="panel" ng-show="panel.isSelected(3)">
 						<h4>Reviews</h4>
-						<blockquote ng-repeat="review in product.reviews"
-							ng-include="'app/templates/review.html'">
+						<blockquote product-review ng-repeat="review in product.reviews">
 						</blockquote>
 
 						<form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
