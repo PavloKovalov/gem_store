@@ -1,20 +1,12 @@
 (function(){
-	var app = angular.module('store', []);
+	var app = angular.module('store', ['store-products']);
 
 	app.controller('StoreController', function(){
 		this.products = gems;
 	});
 
 	app.controller('PanelController', function () {
-		this.tab = 1;
-
-		this.selectTab = function (setTab) {
-			this.tab = setTab;
-		}
-
-		this.isSelected = function (checkTab) {
-			return this.tab === checkTab;
-		}
+		
 	});
 
 	app.controller('ReviewController', function () {
@@ -24,14 +16,6 @@
 			this.review.createdOn = Date.now();
 			product.reviews.push(this.review);
 			this.review = {};
-		};
-	});
-
-	// Custom directives
-	app.directive('productReview', function () {
-		return {
-			restrict: 'A',
-			templateUrl: 'app/templates/review.html'
 		};
 	});
 
