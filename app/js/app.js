@@ -6,7 +6,7 @@
 
 		store.products = [];
 
-		$http.get('/app/gems.json').success(function(data){
+		$http.get('app/gems.json').success(function(data){
 			console.log(data);
 			store.products = data;
 		});
