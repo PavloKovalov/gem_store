@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="store">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<style type="text/css">
+	.ng-invalid.ng-dirty {
+		border-color: #FA787E;
+	}
+	.ng-valid.ng-dirty {
+		border-color: #78FA79;
+	}
+	</style>
+</head>
+<body ng-controller="StoreController as store">
+	<ul class="list-group">
+		<li class="list-group-item" ng-repeat="product in store.products">
+			<h3>
+				{{ product.name }}
+				<em class="pull-right">{{ product.price | currency }}</em>
+				<img ng-src="{{ product.images[0].full }}" />
+				<ul>
+					<li ng-repeat="image in product.images">
+						<img ng-src="{{ image.thumb }}" />
+					</li>
+				</ul>
+				<product-panels>
+				</product-panels>
+			</h3>
+		</li>
+	</ul>
+	
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app/js/app.js"></script>
+	<script type="text/javascript" src="app/js/products.js"></script>
+</body>
+</html>
